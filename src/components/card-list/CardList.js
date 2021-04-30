@@ -1,12 +1,31 @@
-const CardList = ({ numOfCards }) => {
+// Styles
+import classes from './CardList.module.sass';
 
-  console.log(numOfCards);
+// Components
+import { Card } from '@components';
+
+const CardList = ({ numOfCards }) => {
+  const Cards = generateCards(numOfCards);
 
   return (
-    <div>
-      CardList
-    </div>
+    <ul className={ classes['card-list'] }>
+      { Cards }
+    </ul>
   );
+}
+
+function generateCards(numOfCards) {
+  const Cards = [];
+
+  for (let i = 0; i < numOfCards; i++) {
+    Cards.push(
+      <li key={ i }>
+        <Card/>
+      </li>
+    );
+  }
+
+  return Cards;
 }
 
 export default CardList;

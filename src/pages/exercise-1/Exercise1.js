@@ -5,6 +5,7 @@ import classes from './Exercise1.module.sass';
 import { Header, CardList } from '@components';
 
 const Exercise1 = () => {
+
   const propsToPass = {
     numOfCards: 3
   };
@@ -12,7 +13,9 @@ const Exercise1 = () => {
   return (
     <main className={ classes['main'] }>
       <Header/>
-      <CardList {...propsToPass}/>
+      <section className={ classes['main__section'] }>
+        <CardList {...propsToPass}/>
+      </section>
     </main>
   );
 }
