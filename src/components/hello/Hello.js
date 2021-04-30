@@ -1,19 +1,19 @@
 // CSS
-import classes from './Hello.module.css';
+import classes from './Hello.module.sass';
 
 // Libraries
 import classnames from 'classnames';
 
-const Hello = () => {
-  const classNames = {
-    main: classnames(classes['red'])
-  }
+const Hello = ({ text }) => {
 
-  console.log(classes);
+  // Classes
+  const classNames = {
+    main: classnames(classes['colorize'])
+  }
 
   return (
     <div className={ classNames.main }>
-      Hello
+      { text }
     </div>
   );
 }

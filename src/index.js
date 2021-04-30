@@ -4,14 +4,17 @@ import './styles/base/main.sass';
 
 // Libraries
 import ReactDom from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// Src Code
-import { Hello } from './components';
+// Pages & Components
+import { Exercise1, Exercise2 } from '@pages';
 
 ReactDom.render(
-  <>
-    <Hello/>
-    <div>from the other side</div>
-  </>,
+  <Router>
+    <Switch>
+      <Route path="/exercise-1" component={ Exercise1 } exact/>
+      <Route path="/exercise-2" component={ Exercise2 } exact/>
+    </Switch>
+  </Router>,
   document.getElementById("root")
 );

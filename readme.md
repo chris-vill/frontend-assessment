@@ -11,5 +11,9 @@
 * Mobile banner - http://via.placeholder.com/600x600
 * Content images - http://via.placeholder.com/400x300
 
-##### New JSX Transform
-https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+##### ToDo Documentation (maybe create a wiki)
+* React New JSX Transform - https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+* Snowpack
+
+##### Bugs Encountered
+* Fixing client side routing with Snowpack - https://github.com/snowpackjs/snowpack/discussions/2297

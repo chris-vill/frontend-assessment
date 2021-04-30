@@ -6,7 +6,7 @@ module.exports = {
     [
       "@snowpack/plugin-babel",
       {
-        "input": ['.js', '.mjs', '.jsx', '.ts', '.tsx']
+        "input": ['.js']
       }
     ],
     '@snowpack/plugin-sass'
@@ -16,9 +16,17 @@ module.exports = {
       "react/jsx-runtime"
     ]
   },
+  routes: [
+    {
+      match: 'routes',
+      src: '.*',
+      dest: '/index.html'
+    },
+  ],
   alias: {
     "@styles": "./src/styles",
     "@components": "./src/components",
+    "@pages": "./src/pages",
     "@assets": "./src/assets",
     "@core": "./src/core"
   }
