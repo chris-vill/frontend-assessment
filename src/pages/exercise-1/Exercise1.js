@@ -1,10 +1,19 @@
+// Styles
+import classes from './Exercise1.module.sass';
+
 // Components
-import { Hello } from '@components';
+import { Header, CardList } from '@components';
 
 const Exercise1 = () => {
+  const propsToPass = {
+    numOfCards: 3
+  };
 
   return (
-    <Hello text="Exercise 1"/>
+    <main className={ classes['main'] }>
+      <Header/>
+      <CardList {...propsToPass}/>
+    </main>
   );
 }
 

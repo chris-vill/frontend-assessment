@@ -1,4 +1,4 @@
-// CSS
+// Styles
 import './styles/base/reset.sass';
 import './styles/base/main.sass';
 

@@ -1,0 +1,46 @@
+@use '../../styles/utilities' as *
+@use '../../styles/abstracts' as *
+
+// For mobile
+.header
+  // size & position
+  +fx-vertical
+  +h(61em)
+  +p(2em)
+  align-items: center
+  justify-content: center
+
+  // background
+  background-image: url('http://via.placeholder.com/600x600')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+  // others
+  color: $light-text
+  text-align: center
+
+  &__title
+    font-weight: bold
+    font-size: 8rem
+
+  
+  &__subtitle
+    font-size: 4rem
+
+
+// For desktop
+@media screen and (min-width: 1025px)
+  .header
+    +h(32em)
+    background-image: url('http://via.placeholder.com/1920x650')
+
+    &__title
+      font-size: 4.2rem
+    
+    &__subtitle
+      font-size: 2.3rem
+  
+
+  
+

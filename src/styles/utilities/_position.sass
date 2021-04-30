@@ -17,7 +17,7 @@
   position: $a
 
 
-// Position with direction
+// Position with 2 directions
 =pos-tr($pos, $a, $b: "")
   position: $pos
 
@@ -85,8 +85,30 @@
     right: $b
 
 
+// Position with 3 directions
+=pos-tlr($pos, $args)
+  $length: length($args)
+
+  position: $pos
+
+  @if $length == 1
+    top: nth($args, 1)
+    right: nth($args, 1)
+    left: nth($args, 1)
+  
+  @if $length == 2
+    top: nth($args, 1)
+    right: nth($args, 2)
+    left: nth($args, 2)
+  
+  @if $length == 3
+    top: nth($args, 1)
+    left: nth($args, 2)
+    right: nth($args, 3)
+
+
 // Postion with all directions
-=pos-trbl($pos, $args)
+=pos-tblr($pos, $args)
   $length: length($args)
 
   position: $pos
@@ -94,14 +116,14 @@
   @if $length == 1
     top: nth($args, 1)
     bottom: nth($args, 1)
-    right: nth($args, 1)
     left: nth($args, 1)
+    right: nth($args, 1)
   
   @if $length == 2
     top: nth($args, 1)
     bottom: nth($args, 1)
-    right: nth($args, 2)
     left: nth($args, 2)
+    right: nth($args, 2)
   
   @if $length == 3
     top: nth($args, 1)
@@ -111,6 +133,6 @@
   
   @if $length == 4
     top: nth($args, 1)
-    right: nth($args, 2)
-    bottom: nth($args, 3)
-    left: nth($args, 4)
+    bottom: nth($args, 2)
+    left: nth($args, 3)
+    right: nth($args, 4)
