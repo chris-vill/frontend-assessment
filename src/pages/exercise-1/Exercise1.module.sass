@@ -1,5 +1,7 @@
 @use '../../styles/utilities' as *
-  
+@use '../../styles/abstracts/breakpoints'
+
+// For mobile 
 .main
   +pos-tblr(absolute, 0)
   +fx-vertical
@@ -7,5 +9,8 @@
   &__section
     +p(6em, 4em)
 
-// @media screen and (min-width: 1025px)
+// For desktop
+@media screen and (min-width: breakpoints.$desktop)
+  .main__section
+    +p(2em, 2em)
   

@@ -1,5 +1,6 @@
 @use '../../styles/utilities' as *
 @use '../../styles/abstracts/colors'
+@use '../../styles/abstracts/breakpoints'
 
 .card
   // size & position
@@ -8,11 +9,11 @@
 
   // box
   border-radius: 14px
-  box-shadow: 0 0 10px 2px colors.$card-shadow
+  box-shadow: 0 0 2px 1px colors.$card-shadow
 
   &__image
     // size & position
-    +pb(3em)
+    +mb(3em)
 
     // box
     border-radius: 14px
@@ -27,3 +28,21 @@
 
 .button
   align-self: center
+  +mtb(38px)
+
+@media screen and (min-width: breakpoints.$desktop)
+  .card
+    +max-w(324px)
+    +p(1.5em)
+    +h(100%)
+
+    &__image
+      border-radius: 4px
+      +mb(1em)
+
+    &__description
+      font-size: 1rem
+      +h(100%)
+  
+  .button
+    +mtb(14px, 0)

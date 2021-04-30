@@ -1,9 +1,10 @@
+@use '../../styles/utilities' as *
 @use '../../styles/abstracts/colors'
+@use '../../styles/abstracts/breakpoints'
 
 .button
   // spacing
-  padding: 26px 58px
-
+  +p(26px, 58px)
 
   // font
   font-size: 2.5rem
@@ -15,3 +16,10 @@
 
   // others
   background-color: colors.$button-background
+
+@media screen and (min-width: breakpoints.$desktop)
+  .button
+    // spacing
+    +p(8px, 16px)
+    border-width: 3px
+    font-size: 0.9rem

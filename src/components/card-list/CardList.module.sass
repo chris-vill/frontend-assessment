@@ -1,7 +1,17 @@
 @use '../../styles/utilities' as *
+@use '../../styles/abstracts/breakpoints'
 
 .card-list
   +fx-vertical
 
   &__item:not(:last-child)
     +mb(6em)
+
+@media screen and (min-width: breakpoints.$desktop)
+  .card-list
+    justify-content: center
+    +fx-row
+
+    &__item:not(:last-child)
+      +mb(0)
+      +mr(2em)

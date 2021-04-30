@@ -1,5 +1,6 @@
 @use '../../styles/utilities' as *
 @use '../../styles/abstracts/colors'
+@use '../../styles/abstracts/breakpoints'
 
 // For mobile
 .header
@@ -30,7 +31,7 @@
 
 
 // For desktop
-@media screen and (min-width: 1025px)
+@media screen and (min-width: breakpoints.$desktop)
   .header
     +h(32em)
     background-image: url('http://via.placeholder.com/1920x650')
