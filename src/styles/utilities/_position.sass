@@ -1,0 +1,116 @@
+// Position Types
+=absolute
+  position: absolute
+
+=relative
+  position: relative
+
+=sticky
+  position: sticky
+
+=fixed
+  position: fixed
+
+
+// For values not specific to position
+=pos($a)
+  position: $a
+
+
+// Position with direction
+=pos-tr($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == ""
+    top: $a
+    right: $a
+
+  @else
+    top: $a
+    right: $b
+
+=pos-tl($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == ""
+    top: $a
+    left: $a
+
+  @else
+    top: $a
+    left: $b
+
+=pos-br($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == ""
+    bottom: $a
+    right: $a
+
+  @else
+    bottom: $a
+    right: $b
+
+=pos-bl($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == 0
+    bottom: $a
+    left: $a
+
+  @else
+    bottom: $a
+    left: $b
+
+=pos-tb($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == 0
+    top: $a
+    bottom: $a
+
+  @else
+    top: $a
+    bottom: $b
+
+=pos-lr($pos, $a, $b: "")
+  position: $pos
+
+  @if $b == 0
+    left: $a
+    right: $a
+
+  @else
+    left: $a
+    right: $b
+
+
+// Postion with all directions
+=pos-trbl($pos, $args)
+  $length: length($args)
+
+  position: $pos
+
+  @if $length == 1
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    right: nth($args, 1)
+    left: nth($args, 1)
+  
+  @if $length == 2
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    right: nth($args, 2)
+    left: nth($args, 2)
+  
+  @if $length == 3
+    top: nth($args, 1)
+    left: nth($args, 2)
+    right: nth($args, 2)
+    bottom: nth($args, 3)
+  
+  @if $length == 4
+    top: nth($args, 1)
+    right: nth($args, 2)
+    bottom: nth($args, 3)
+    left: nth($args, 4)

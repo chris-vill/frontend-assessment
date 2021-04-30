@@ -1,0 +1,32 @@
+{
+  "name": "frontend-assessment",
+  "version": "1.0.0",
+  "description": "MindArc's Frontend Assessment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "snowpack dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-vill/frontend-assessment.git"
+  },
+  "author": "Christopher Villaran <villaran.christopher@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-vill/frontend-assessment/issues"
+  },
+  "homepage": "https://github.com/chris-vill/frontend-assessment#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-react": "^7.13.13",
+    "@snowpack/plugin-babel": "^2.1.7",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "snowpack": "^3.3.5"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
