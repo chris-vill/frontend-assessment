@@ -1,0 +1,29 @@
+@use '../../styles/utilities' as *
+@use '../../styles/abstracts/colors'
+
+.card
+  // size & position
+  +fx-vertical
+  +p(3em)
+
+  // box
+  border-radius: 14px
+  box-shadow: 0 0 10px 2px colors.$card-shadow
+
+  &__image
+    // size & position
+    +pb(3em)
+
+    // box
+    border-radius: 14px
+  
+  &__description
+    // font
+    font-size: 3rem
+    text-align: center
+
+    // others
+    color: colors.$card-description
+
+.button
+  align-self: center

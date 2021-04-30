@@ -4,28 +4,19 @@ import classes from './CardList.module.sass';
 // Components
 import { Card } from '@components';
 
-const CardList = ({ numOfCards }) => {
-  const Cards = generateCards(numOfCards);
+const CardList = ({ cards }) => {
+
+  const Cards = cards.map((details, i) => (
+    <li className={ classes['card-list__item'] } key={ i }>
+      <Card {...details}/>
+    </li>
+  ));
 
   return (
     <ul className={ classes['card-list'] }>
       { Cards }
     </ul>
   );
-}
-
-function generateCards(numOfCards) {
-  const Cards = [];
-
-  for (let i = 0; i < numOfCards; i++) {
-    Cards.push(
-      <li key={ i }>
-        <Card/>
-      </li>
-    );
-  }
-
-  return Cards;
 }
 
 export default CardList;

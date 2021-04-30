@@ -22,7 +22,9 @@ module.exports = {
       "core-js/modules/es.array.for-each.js",
       "core-js/modules/web.dom-collections.for-each.js",
       "core-js/modules/es.object.get-own-property-descriptors.js",
-      "core-js/modules/es.object.define-properties.js"
+      "core-js/modules/es.object.define-properties.js",
+      "core-js/modules/es.array.map.js",
+      "core-js/modules/es.symbol.description.js"
     ]
   },
   routes: [

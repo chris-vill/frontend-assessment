@@ -1,9 +1,15 @@
-const Button = () => {
+// Styles
+import classes from './Button.module.sass';
+
+// Libraries
+import classNames from 'classnames';
+
+const Button = ({ text, extClasses }) => {
 
   return (
-    <div>
-      Button
-    </div>
+    <button className={ classNames(classes['button'], extClasses) }>
+      { text }
+    </button>
   );
 }
 
