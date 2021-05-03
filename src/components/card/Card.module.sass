@@ -9,7 +9,7 @@
 
   // box
   border-radius: 14px
-  box-shadow: 0 0 2px 1px colors.$card-shadow
+  box-shadow: 0 0 10px 2px colors.$card-shadow
 
   &__image
     // size & position
@@ -32,6 +32,7 @@
 
 @media screen and (min-width: breakpoints.$desktop)
   .card
+    box-shadow: 0 0 2px 1px colors.$card-shadow
     +max-w(324px)
     +p(1.5em)
     +h(100%)
