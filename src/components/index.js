@@ -3,6 +3,7 @@ import Card from './card/Card';
 import CardList from './card-list/CardList';
 import Header from './header/Header';
 import Accordion from './accordion/Accordion';
+import Tabs from './tabs/Tabs';
 import Icon from './icon/Icon';
 
 export {
@@ -11,5 +12,6 @@ export {
   CardList,
   Header,
   Accordion,
+  Tabs,
   Icon
 };

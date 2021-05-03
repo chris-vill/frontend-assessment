@@ -1,5 +1,4 @@
 // Styles
-// import classes from './Accordion.module.sass';
 
 // Components
 import AccordionItem from './accordion-item/AccordionItem';
@@ -7,7 +6,6 @@ import AccordionItem from './accordion-item/AccordionItem';
 const Accordion = ({ data }) => {
 
   return (
-    // <ul className={ classes['accordion'] }> {
     <ul> {
       data.map((d, i) => (
         <li key={ i }>

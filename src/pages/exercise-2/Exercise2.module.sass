@@ -3,8 +3,9 @@
 
 .main
   font-size: 62.5%
-  +pos-t(absolute, 0)
-  +plr(5em)
+  +pos-tblr(absolute, 0)
 
-// @media screen and (max-width: breakpoints.$desktop)
-  
+@media screen and (min-width: breakpoints.$desktop)
+  .main
+    font-size: 100%
+    +p(4em, 22em)

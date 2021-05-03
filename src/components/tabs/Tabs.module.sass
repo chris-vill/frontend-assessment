@@ -1,0 +1,59 @@
+@use '../../styles/utilities' as *
+
+$curve: 8px
+
+.tabs
+  +flex
+  +pos-t(relative, 1px)
+  align-items: flex-end
+
+.tab
+  background-color: hsl(0, 0%, 95%)
+  border: 1px solid hsl(0, 0%, 80%)
+  position: relative
+  +p(0.25em, 1.5em)
+
+  &:first-child
+    border-top-left-radius: $curve
+  
+  &:last-child
+    border-top-right-radius: $curve
+
+  &:not(:last-child)
+    border-right: none
+  
+.article
+  border: 1px solid hsl(0, 0%, 80%)
+  border-radius: 0px 0px $curve $curve
+  +p(1em, 1.5em, 1em, 1.5em)
+
+  p
+    text-indent: 1.5rem
+
+    &:not(:first-child)
+      +mt(1em)
+  
+  ul
+    list-style-type: disc
+    +mtl(1em)
+
+
+// States
+.tab--active.tab--active
+  background-color: white
+  border-right: 1px solid hsl(0, 0%, 80%)
+  border-bottom: none
+  +ptb(0.5em)
+
+  & + .tab
+    border-left: none
+
+// Transitions
+.tab
+  transition-property: padding-top, padding-bottom, background-color
+  transition-duration: 0.25s, 0.25s, 0.25s
+  transition-timing-function: ease-out, ease-out, ease-out
+  transition-delay: 0.25s, 0.25s, 0.25s
+
+.tab--active
+  transition-delay: 0s, 0s, 0s

@@ -3,23 +3,24 @@ import classes from './Exercise2.module.sass';
 
 // Data & Libraries
 import data from '@assets/data.json';
-import { getViewportWidth } from '@core/utilities';
+import useWindowSize from '@hooks/use-window-size';
 
 // Components
-import { Accordion } from '@components';
+import { Accordion, Tabs } from '@components';
 
 const Exercise2 = () => {
-
-  // console.log(getViewportWidth());
+  const viewportWidth = useWindowSize();
 
   const propsToPass = {
     data
   };
 
   return (
-    <main className={ classes['main'] }>
-      <Accordion {...propsToPass}/>
-    </main>
+    <main className={ classes['main'] }> {
+      viewportWidth < 981
+        ? <Accordion {...propsToPass}/>
+        : <Tabs {...propsToPass}/>
+    } </main>
   );
 }
 
