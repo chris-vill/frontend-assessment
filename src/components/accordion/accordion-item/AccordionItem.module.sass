@@ -1,0 +1,33 @@
+@use '../../../styles/utilities' as *
+@use '../../../styles/abstracts/colors'
+
+.accordion-item
+  
+  &__header
+
+    // size & position
+    justify-content: space-between
+    +flex
+    +p(0.25em, 0.8em)
+    +pos-t(sticky, 0)
+
+    // font
+    font-size: 3rem
+
+    // others
+    background-color: hsl(206, 100%, 37%)
+    border-bottom: 4px solid black
+    color: colors.$light-text
+  
+  &__article
+
+    // size & position
+    +p(0.5em, 1em)
+
+    // font
+    font-size: 2.5rem
+
+    color: green
+
+.icon.icon
+  color: white
