@@ -1,5 +1,4 @@
 @use '../../styles/utilities' as *
-@use '../../styles/abstracts/colors'
 @use '../../styles/abstracts/breakpoints'
 
 .button
@@ -9,13 +8,6 @@
   // font
   font-size: 2.5rem
   font-weight: bold
-
-  // box
-  border-radius: 90px
-  border: 8px solid colors.$button-foreground
-
-  // others
-  background-color: colors.$button-background
 
 @media screen and (min-width: breakpoints.$desktop)
   .button

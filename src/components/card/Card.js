@@ -5,12 +5,18 @@ import classes from './Card.module.sass';
 import { Button } from '@components';
 
 const Card = ({ image, description }) => {
+  const styles = {
+    card: classes['card'],
+    image: classes['card__image'],
+    description: classes['card__description'],
+    button: classes['button']
+  };
 
   return (
-    <div className={ classes['card'] }>
-      <img className={ classes['card__image'] } src={ image }/>
-      <article className={ classes['card__description'] }>{ description }</article>
-      <Button extClasses={ classes['button'] } text="R E A D &nbsp; M O R E"/>
+    <div className={ styles.card }>
+      <img className={ styles.image } src={ image }/>
+      <article className={ styles.description }>{ description }</article>
+      <Button extClasses={ styles.button } text="R E A D &nbsp; M O R E"/>
     </div>
   );
 }
