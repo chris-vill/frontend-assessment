@@ -11,7 +11,7 @@ const Accordion = ({ data }) => {
     <ul> {
       data.map((d, i) => (
         <li key={ i }>
-          <AccordionItem {...d}/>
+          <AccordionItem {...d} initialState={ i === 0 }/>
         </li>
       ))
     } </ul>

@@ -2,7 +2,7 @@
 import classes from './Icon.module.sass';
 
 // Libraries
-import classnames from 'classnames';
+import joinClasses from 'classnames';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -14,7 +14,7 @@ library.add(fasCaretLeft);
 const Icon = ({ icon, extClasses = '' }) => {
 
   return (
-    <div className={ classnames(classes["icon"], extClasses) }>
+    <div className={ joinClasses(classes["icon"], extClasses) }>
       <FontAwesomeIcon icon={ getIconCode(icon) }/>
     </div>
   );

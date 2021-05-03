@@ -2,12 +2,12 @@
 import classes from './Button.module.sass';
 
 // Libraries
-import classNames from 'classnames';
+import joinClasses from 'classnames';
 
 const Button = ({ text, extClasses }) => {
 
   return (
-    <button className={ classNames(classes['button'], extClasses) }>
+    <button className={ joinClasses(classes['button'], extClasses) }>
       { text }
     </button>
   );
