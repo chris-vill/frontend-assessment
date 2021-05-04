@@ -5,9 +5,12 @@ import classes from './Button.module.sass';
 import joinClasses from 'classnames';
 
 const Button = ({ text, extClasses }) => {
+  const styles = {
+    button: joinClasses(classes['button'], extClasses)
+  };
 
   return (
-    <button className={ joinClasses(classes['button'], extClasses) }>
+    <button className={ styles.button }>
       { text }
     </button>
   );

@@ -20,14 +20,19 @@ const Exercise1 = () => {
     }
   ];
 
+  const styles = {
+    main: classes['main'],
+    section: classes['main__section']
+  };
+
   const propsToPass = {
     cards
   };
 
   return (
-    <main className={ classes['main'] }>
+    <main className={ styles.main }>
       <Header/>
-      <section className={ classes['main__section'] }>
+      <section className={ styles.section }>
         <CardList {...propsToPass}/>
       </section>
     </main>

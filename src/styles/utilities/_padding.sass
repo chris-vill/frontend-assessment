@@ -103,3 +103,57 @@
     padding-top: nth($args, 1)
     padding-left: nth($args, 2)
     padding-right: nth($args, 3)
+
+=pblr($args...)
+  $length: length($args)
+
+  @if $length == 1
+    padding-bottom: nth($args, 1)
+    padding-left: nth($args, 1)
+    padding-right: nth($args, 1)
+  
+  @if $length == 2
+    padding-bottom: nth($args, 1)
+    padding-left: nth($args, 2)
+    padding-right: nth($args, 2)
+  
+  @if $length == 3
+    padding-bottom: nth($args, 1)
+    padding-left: nth($args, 2)
+    padding-right: nth($args, 3)
+
+=ptbl($args...)
+  $length: length($args)
+
+  @if $length == 1
+    padding-top: nth($args, 1)
+    padding-bottom: nth($args, 1)
+    padding-left: nth($args, 1)
+  
+  @if $length == 2
+    padding-top: nth($args, 1)
+    padding-bottom: nth($args, 1)
+    padding-left: nth($args, 2)
+  
+  @if $length == 3
+    padding-top: nth($args, 1)
+    padding-bottom: nth($args, 2)
+    padding-left: nth($args, 3)
+
+=ptbr($args...)
+  $length: length($args)
+
+  @if $length == 1
+    padding-top: nth($args, 1)
+    padding-bottom: nth($args, 1)
+    padding-right: nth($args, 1)
+  
+  @if $length == 2
+    padding-top: nth($args, 1)
+    padding-bottom: nth($args, 1)
+    padding-right: nth($args, 2)
+  
+  @if $length == 3
+    padding-top: nth($args, 1)
+    padding-bottom: nth($args, 2)
+    padding-right: nth($args, 3)

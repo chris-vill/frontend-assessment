@@ -1,7 +1,7 @@
 // Styles
 import classes from './Exercise2.module.sass';
 
-// Data & Libraries
+// Libraries
 import data from '@assets/data.json';
 import useWindowSize from '@hooks/use-window-size';
 
@@ -10,13 +10,16 @@ import { Accordion, Tabs } from '@components';
 
 const Exercise2 = () => {
   const viewportWidth = useWindowSize();
+  const styles = {
+    main: classes['main']
+  };
 
   const propsToPass = {
     data
   };
 
   return (
-    <main className={ classes['main'] }> {
+    <main className={ styles.main }> {
       viewportWidth < 981
         ? <Accordion {...propsToPass}/>
         : <Tabs {...propsToPass}/>

@@ -1,12 +1,12 @@
 // Styles
-import './styles/base/reset.sass';
-import './styles/base/main.sass';
+import '@styles/base/reset.sass';
+import '@styles/base/main.sass';
 
 // Libraries
 import ReactDom from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// Pages & Components
+// Pages
 import { Main, Exercise1, Exercise2 } from '@pages';
 
 ReactDom.render(

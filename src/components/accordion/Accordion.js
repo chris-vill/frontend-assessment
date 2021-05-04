@@ -1,5 +1,3 @@
-// Styles
-
 // Components
 import AccordionItem from './accordion-item/AccordionItem';
 

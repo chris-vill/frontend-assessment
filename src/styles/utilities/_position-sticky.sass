@@ -1,0 +1,197 @@
+// Position with 1 direction
+=sti-t($a)
+  position: sticky
+  top: $a
+
+=sti-b($a)
+  position: sticky
+  bottom: $a
+
+=sti-l($a)
+  position: sticky
+  left: $a
+
+=sti-r($a)
+  position: sticky
+  right: $a
+
+
+// Position with 2 directions
+=sti-tr($a, $b: "")
+  position: sticky
+
+  @if $b == ""
+    top: $a
+    right: $a
+
+  @else
+    top: $a
+    right: $b
+
+=sti-tl($a, $b: "")
+  position: sticky
+
+  @if $b == ""
+    top: $a
+    left: $a
+
+  @else
+    top: $a
+    left: $b
+
+=sti-br($a, $b: "")
+  position: sticky
+
+  @if $b == ""
+    bottom: $a
+    right: $a
+
+  @else
+    bottom: $a
+    right: $b
+
+=sti-bl($a, $b: "")
+  position: sticky
+
+  @if $b == 0
+    bottom: $a
+    left: $a
+
+  @else
+    bottom: $a
+    left: $b
+
+=sti-tb($a, $b: "")
+  position: sticky
+
+  @if $b == 0
+    top: $a
+    bottom: $a
+
+  @else
+    top: $a
+    bottom: $b
+
+=sti-lr($a, $b: "")
+  position: sticky
+
+  @if $b == 0
+    left: $a
+    right: $a
+
+  @else
+    left: $a
+    right: $b
+
+
+// Position with 3 directions
+=sti-tlr($args)
+  $length: length($args)
+
+  position: sticky
+
+  @if $length == 1
+    top: nth($args, 1)
+    right: nth($args, 1)
+    left: nth($args, 1)
+  
+  @if $length == 2
+    top: nth($args, 1)
+    right: nth($args, 2)
+    left: nth($args, 2)
+  
+  @if $length == 3
+    top: nth($args, 1)
+    left: nth($args, 2)
+    right: nth($args, 3)
+
+=sti-blr($args)
+  $length: length($args)
+
+  position: sticky
+
+  @if $length == 1
+    bottom: nth($args, 1)
+    right: nth($args, 1)
+    left: nth($args, 1)
+  
+  @if $length == 2
+    bottom: nth($args, 1)
+    right: nth($args, 2)
+    left: nth($args, 2)
+  
+  @if $length == 3
+    bottom: nth($args, 1)
+    left: nth($args, 2)
+    right: nth($args, 3)
+
+=sti-tbl($args)
+  $length: length($args)
+
+  position: sticky
+
+  @if $length == 1
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    left: nth($args, 1)
+  
+  @if $length == 2
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    left: nth($args, 2)
+  
+  @if $length == 3
+    top: nth($args, 1)
+    bottom: nth($args, 2)
+    left: nth($args, 3)
+
+=sti-tbr($args)
+  $length: length($args)
+
+  position: sticky
+
+  @if $length == 1
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    right: nth($args, 1)
+  
+  @if $length == 2
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    right: nth($args, 2)
+  
+  @if $length == 3
+    top: nth($args, 1)
+    bottom: nth($args, 2)
+    right: nth($args, 3)
+
+
+// Postion with all directions
+=sti-tblr($args)
+  $length: length($args)
+
+  position: sticky
+
+  @if $length == 1
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    left: nth($args, 1)
+    right: nth($args, 1)
+  
+  @if $length == 2
+    top: nth($args, 1)
+    bottom: nth($args, 1)
+    left: nth($args, 2)
+    right: nth($args, 2)
+  
+  @if $length == 3
+    top: nth($args, 1)
+    left: nth($args, 2)
+    right: nth($args, 2)
+    bottom: nth($args, 3)
+  
+  @if $length == 4
+    top: nth($args, 1)
+    bottom: nth($args, 2)
+    left: nth($args, 3)
+    right: nth($args, 4)

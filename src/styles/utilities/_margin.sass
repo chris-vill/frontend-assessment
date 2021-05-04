@@ -6,13 +6,13 @@
     margin: nth($args, 1)
   
   @if $length == 2
-    margin: nth($args, 1), nth($args, 2)
+    margin: nth($args, 1) nth($args, 2)
   
   @if $length == 3
-    margin: nth($args, 1), nth($args, 2), nth($args, 3)
+    margin: nth($args, 1) nth($args, 2) nth($args, 3)
       
   @if $length == 4
-    margin: nth($args, 1), nth($args, 2), nth($args, 3), nth($args, 4)
+    margin: nth($args, 1) nth($args, 2) nth($args, 3) nth($args, 4)
 
 
 // One Direction
@@ -83,3 +83,77 @@
   @else
     margin-left: $a
     margin-right: $b
+
+
+// Three Directions
+=mtlr($args...)
+  $length: length($args)
+
+  @if $length == 1
+    margin-top: nth($args, 1)
+    margin-left: nth($args, 1)
+    margin-right: nth($args, 1)
+  
+  @if $length == 2
+    margin-top: nth($args, 1)
+    margin-left: nth($args, 2)
+    margin-right: nth($args, 2)
+  
+  @if $length == 3
+    margin-top: nth($args, 1)
+    margin-left: nth($args, 2)
+    margin-right: nth($args, 3)
+
+=mblr($args...)
+  $length: length($args)
+
+  @if $length == 1
+    margin-bottom: nth($args, 1)
+    margin-left: nth($args, 1)
+    margin-right: nth($args, 1)
+  
+  @if $length == 2
+    margin-bottom: nth($args, 1)
+    margin-left: nth($args, 2)
+    margin-right: nth($args, 2)
+  
+  @if $length == 3
+    margin-bottom: nth($args, 1)
+    margin-left: nth($args, 2)
+    margin-right: nth($args, 3)
+
+=mtbl($args...)
+  $length: length($args)
+
+  @if $length == 1
+    margin-top: nth($args, 1)
+    margin-bottom: nth($args, 1)
+    margin-left: nth($args, 1)
+  
+  @if $length == 2
+    margin-top: nth($args, 1)
+    margin-bottom: nth($args, 1)
+    margin-left: nth($args, 2)
+  
+  @if $length == 3
+    margin-top: nth($args, 1)
+    margin-bottom: nth($args, 2)
+    margin-left: nth($args, 3)
+
+=mtbr($args...)
+  $length: length($args)
+
+  @if $length == 1
+    margin-top: nth($args, 1)
+    margin-bottom: nth($args, 1)
+    margin-right: nth($args, 1)
+  
+  @if $length == 2
+    margin-top: nth($args, 1)
+    margin-bottom: nth($args, 1)
+    margin-right: nth($args, 2)
+  
+  @if $length == 3
+    margin-top: nth($args, 1)
+    margin-bottom: nth($args, 2)
+    margin-right: nth($args, 3)

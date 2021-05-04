@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@styles/*": ["src/styles/*"],
-      "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
-      "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
-      "@core/*": ["src/core/*"]
+      "@components/*": ["src/components/*"],
+      "@core/*": ["src/core/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "exclude": ["node_modules"]
