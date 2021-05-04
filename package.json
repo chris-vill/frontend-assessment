@@ -4,6 +4,7 @@
   "description": "MindArc's Frontend Assessment",
   "main": "index.js",
   "scripts": {
+    "start": "yarn && npm run dev",
     "dev": "snowpack dev"
   },
   "repository": {
