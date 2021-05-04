@@ -9,18 +9,25 @@ import joinClasses from 'classnames';
 const Tabs = ({ data }) => {
   const [ currentTabIndex, setTabIndex ] = useState(0);
   const styles = {
-    tabs: classes['tabs'],
+    nav: classes['nav'],
+    tabs: classes['nav__tabs'],
     tab: index => (joinClasses(
-      classes['tab'],
+      classes['nav__tab'],
       currentTabIndex === index
-        ? classes['tab--active']
+        ? classes['nav__tab--active']
         : ''
     )),
-    article: classes['article']
+    articles: classes['nav__articles'],
+    article: index => (joinClasses(
+      classes['nav__article'],
+      currentTabIndex === index
+        ? classes['nav__article--active']
+        : ''
+    ))
   };
 
   return (
-    <nav>
+    <nav className={ styles.nav }>
       <ul className={ styles.tabs }> {
         data.map((d, i) => (
           <li
@@ -30,9 +37,11 @@ const Tabs = ({ data }) => {
           >{ d.title }</li>
         ))
       } </ul>
-      <article className={ styles.article }> {
-        parse(data[currentTabIndex].content)
-      } </article>
+      <section className={ styles.articles }> {
+        data.map((d, i) => (
+          <article className={ styles.article(i) }>{ parse(d.content) }</article>
+        ))
+      } </section>
     </nav>
   );
 }
